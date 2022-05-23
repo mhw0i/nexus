@@ -11,16 +11,20 @@
 /process/em/verbose 0
 
 # Geometry
-/Geometry/NextNew/elfield 0
-/Geometry/NextNew/max_step_size 1. mm
-/Geometry/NextNew/pressure 15. bar
-/Geometry/NextNew/field_cage_vis true
+#/Geometry/NextNew/elfield 0
+#/Geometry/NextNew/max_step_size 1. mm
+#/Geometry/NextNew/pressure 15. bar
+#/Geometry/NextNew/field_cage_vis true
 
 ### Generation
-/Generator/SingleParticle/particle e-
+/Generator/SingleParticle/particle opticalphoton #geantino
 /Generator/SingleParticle/min_energy 1. MeV
 /Generator/SingleParticle/max_energy 1. MeV
-/Generator/SingleParticle/region ACTIVE
+#/Generator/SingleParticle/momentum 0 0 -1
+#/Generator/SingleParticle/min_phi -0.1
+#/Generator/SingleParticle/max_phi 0.1 
+/Generator/SingleParticle/region CENTER
+#/Generator/SingleParticle/region ACTIVE
 
 /control/execute macros/physics/IonizationElectron.mac
 

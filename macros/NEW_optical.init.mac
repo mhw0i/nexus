@@ -6,15 +6,16 @@
 ### --------------------------------------------------------
 
 /control/execute macros/physics/DefaultPhysicsList.mac
+/PhysicsList/RegisterPhysics G4OpticalPhysics
 
-/nexus/RegisterGeometry NextNew
+/nexus/RegisterGeometry NDGArChamber #NextNew
 
 /nexus/RegisterGenerator SingleParticleGenerator
 
 /nexus/RegisterPersistencyManager PersistencyManager
 
-/nexus/RegisterTrackingAction DefaultTrackingAction
-/nexus/RegisterEventAction DefaultEventAction
+/nexus/RegisterTrackingAction OpticalTrackingAction #DefaultTrackingAction
+/nexus/RegisterEventAction SaveAllEventAction #DefaultEventAction
 /nexus/RegisterRunAction DefaultRunAction
 
 /nexus/RegisterMacro macros/NEW_optical.config.mac

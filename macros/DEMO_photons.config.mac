@@ -27,14 +27,16 @@
 #/Geometry/Next1EL/muonsGenerator true
 
 # GENERATOR
-/Generator/MuonGenerator/min_energy  4. GeV
-/Generator/MuonGenerator/max_energy  4. GeV
-/Generator/MuonGenerator/region MUONS
-/Generator/MuonGenerator/momentum 0. 0. -1.
+/Generator/ScintGenerator/region 0. 0. 0.
+#/Generator/nphotons 100
+#/Generator/PhotonGenerator/min_energy  4. GeV
+#/Generator/PhotonGenerator/max_energy  4. GeV
+#/Generator/PhotonGenerator/region PHOTONS
+#/Generator/PhotonGenerator/momentum 0. 0. -1.
 
 # ACTIONS
 ## /Actions/MuonsEventAction/energy_threshold 0.6 MeV
-/Actions/MuonsEventAction/stringHist MuonsHist_1.root
+#/Actions/MuonsEventAction/stringHist PhotonsHist_1.root
 
 # PHYSICS
 /PhysicsList/Nexus/clustering          false
@@ -42,4 +44,4 @@
 /PhysicsList/Nexus/electroluminescence false
 
 # PERSISTENCY
-/nexus/persistency/outputFile DEMO_muons.next
+/nexus/persistency/outputFile DEMO_photons.next

@@ -186,6 +186,19 @@ namespace materials {
     return mat;
   }
 
+  G4Material* Air() 
+  {
+    G4String name = "Air";
+    G4Material* mat = G4Material::GetMaterial(name, false);
+
+    if (mat==0) {
+      G4NistManager* nist = G4NistManager::Instance();
+      mat = nist->FindOrBuildMaterial("G4_AIR");
+    }
+
+    return mat;
+  }
+
   G4Material* GXeAr(G4double pressure, G4double temperature, G4double percXe)
   {
     G4String name = "GXeAr";

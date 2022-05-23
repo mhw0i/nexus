@@ -10,13 +10,13 @@
 
 /nexus/RegisterGeometry NDGArChamber #CylindricChamber #Next1EL
 
-/nexus/RegisterGenerator MuonGenerator
+/nexus/RegisterGenerator ScintillationGenerator
 
 /nexus/RegisterPersistencyManager PersistencyManager
 
-/nexus/RegisterTrackingAction DefaultTrackingAction
-/nexus/RegisterEventAction MuonsEventAction
+/nexus/RegisterTrackingAction OpticalTrackingAction
+#/nexus/RegisterEventAction SaveAllEventAction
 /nexus/RegisterRunAction DefaultRunAction
 
-/nexus/RegisterMacro macros/DEMO_muons.config.mac
+/nexus/RegisterMacro macros/DEMO_photons.config.mac
 

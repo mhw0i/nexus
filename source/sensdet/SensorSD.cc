@@ -66,9 +66,12 @@ namespace nexus {
       step->GetPostStepPoint()->GetTouchable();
 
     G4int pmt_id = FindPmtID(touchable);
+    G4cout << "The PMT ID is: " << pmt_id << G4endl;
 
     SensorHit* hit = 0;
+    G4cout << "There are " << HC_->entries() << " entries in HitsCollection" << G4endl;
     for (size_t i=0; i<HC_->entries(); i++) {
+      G4cout << "The PMT ID from HitCollection is: " << (*HC_)[i]->GetPmtID() << G4endl;
       if ((*HC_)[i]->GetPmtID() == pmt_id) {
         hit = (*HC_)[i];
         break;
@@ -98,6 +101,9 @@ namespace nexus {
     G4int pmtid = touchable->GetCopyNumber(sensor_depth_);
     if (naming_order_ != 0) {
       G4int motherid = touchable->GetCopyNumber(mother_depth_);
+      //G4cout << "The mother ID is: " << motherid << G4endl;
+      //G4cout << "The PMT ID is: " << pmtid << G4endl;
+      //G4cout << "The naming order is: " << naming_order_ << G4endl;
       pmtid = naming_order_ * motherid + pmtid;
     }
     return pmtid;

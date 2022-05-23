@@ -82,7 +82,8 @@ void MuonGenerator::GeneratePrimaryVertex(G4Event* event)
                 FatalException, " can not create a muon ");
 
   // Generate an initial position for the particle using the geometry
-  G4ThreeVector position = geom_->GenerateVertex(region_);
+  //G4ThreeVector position = geom_->GenerateVertex(region_);
+  G4ThreeVector position = G4ThreeVector(0.,0.,5.*cm);
   // Particle generated at start-of-event
   G4double time = 0.;
   // Create a new vertex

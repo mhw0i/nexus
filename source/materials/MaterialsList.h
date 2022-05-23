@@ -42,6 +42,8 @@ namespace materials {
 
   // Liquid xenon
   G4Material* LXe();
+  // Air
+  G4Material* Air();
 
   // Argon
   G4Material* GAr(G4double pressure=STP_Pressure,
