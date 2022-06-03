@@ -696,15 +696,16 @@ namespace opticalprops {
   G4MaterialPropertiesTable* PTFE()
   {
     G4MaterialPropertiesTable* mpt = new G4MaterialPropertiesTable();
-
+    G4double test_eff = .95;
     // REFLECTIVITY
     std::vector<G4double> ENERGIES = {
       optPhotMinE_,  2.8 * eV,  3.5 * eV,  4. * eV,
       6. * eV,       7.2 * eV,  optPhotMaxE_
     };
     std::vector<G4double> REFLECTIVITY = {
-      .98,  .98,  .98,  .98,
-      .72,  .72,  .72
+      test_eff, test_eff, test_eff, test_eff, test_eff, test_eff, test_eff
+      //.98,  .98,  .98,  .98,
+      //.72,  .72,  .72
     };
     mpt->AddProperty("REFLECTIVITY", ENERGIES, REFLECTIVITY);
 

@@ -66,12 +66,12 @@ namespace nexus {
       step->GetPostStepPoint()->GetTouchable();
 
     G4int pmt_id = FindPmtID(touchable);
-    G4cout << "The PMT ID is: " << pmt_id << G4endl;
+    //G4cout << "The PMT ID is: " << pmt_id << G4endl;
 
     SensorHit* hit = 0;
-    G4cout << "There are " << HC_->entries() << " entries in HitsCollection" << G4endl;
+    //G4cout << "There are " << HC_->entries() << " entries in HitsCollection" << G4endl;
     for (size_t i=0; i<HC_->entries(); i++) {
-      G4cout << "The PMT ID from HitCollection is: " << (*HC_)[i]->GetPmtID() << G4endl;
+      //G4cout << "The PMT ID from HitCollection is: " << (*HC_)[i]->GetPmtID() << G4endl;
       if ((*HC_)[i]->GetPmtID() == pmt_id) {
         hit = (*HC_)[i];
         break;

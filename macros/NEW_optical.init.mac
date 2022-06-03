@@ -5,16 +5,21 @@
 ###  part of the detector.
 ### --------------------------------------------------------
 
-/control/execute macros/physics/DefaultPhysicsList.mac
+#/control/execute macros/physics/DefaultPhysicsList.mac
+/PhysicsList/RegisterPhysics G4EmStandardPhysics_option4
+/PhysicsList/RegisterPhysics G4DecayPhysics
+/PhysicsList/RegisterPhysics G4RadioactiveDecayPhysics
+/PhysicsList/RegisterPhysics NexusPhysics
+/PhysicsList/RegisterPhysics G4StepLimiterPhysics
 /PhysicsList/RegisterPhysics G4OpticalPhysics
 
-/nexus/RegisterGeometry NDGArChamber #NextNew
+/nexus/RegisterGeometry NDGAr #NextNew
 
 /nexus/RegisterGenerator SingleParticleGenerator
 
 /nexus/RegisterPersistencyManager PersistencyManager
 
-/nexus/RegisterTrackingAction OpticalTrackingAction #DefaultTrackingAction
+/nexus/RegisterTrackingAction DefaultTrackingAction
 /nexus/RegisterEventAction SaveAllEventAction #DefaultEventAction
 /nexus/RegisterRunAction DefaultRunAction
 

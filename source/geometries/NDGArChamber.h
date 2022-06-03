@@ -11,6 +11,9 @@
 
 #include "GeometryBase.h"
 
+#include <G4UniformMagField.hh>
+#include <G4FieldManager.hh>
+
 class G4GenericMessenger;
 
 
@@ -32,6 +35,9 @@ namespace nexus {
   private:
     /// Messenger for the definition of control commands
     G4GenericMessenger* msg_;
+
+    static G4ThreadLocal G4UniformMagField* magnetic_field_;
+    static G4ThreadLocal G4FieldManager* field_mgr_;
   };
 
 } // end namespace nexus

@@ -60,7 +60,7 @@ namespace nexus {
       new G4Tubs("NDGAR", 0., ndgar_diam/2., ndgar_length/2., 0., 360.*deg);
 
     G4Material* argon = materials::GAr(10.*bar);
-    auto argon_mpt = opticalprops::GAr(200./MeV);
+    auto argon_mpt = opticalprops::GAr(0./MeV);
     argon->SetMaterialPropertiesTable(argon_mpt);
 
     G4LogicalVolume* ndgar_logic_vol =
@@ -184,7 +184,8 @@ namespace nexus {
     photosensor_mpt->AddProperty("REFLECTIVITY", energy, reflectivity, 4);
     photosensor_mpt->AddProperty("EFFICIENCY",   energy, efficiency,   4);
     photosensor.SetOpticalProperties(photosensor_mpt);
-
+    // Set time binning
+    photosensor.SetTimeBinning(.001 * us);
     photosensor.SetSensorDepth(1);
     photosensor.SetMotherDepth(0);
     photosensor.SetNamingOrder(0);

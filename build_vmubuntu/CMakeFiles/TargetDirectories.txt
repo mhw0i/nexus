@@ -1,0 +1,9 @@
+/media/sf_VirtualMachineFiles/NEXUS/nexus/build_vmubuntu/CMakeFiles/install/strip.dir
+/media/sf_VirtualMachineFiles/NEXUS/nexus/build_vmubuntu/CMakeFiles/install/local.dir
+/media/sf_VirtualMachineFiles/NEXUS/nexus/build_vmubuntu/CMakeFiles/install.dir
+/media/sf_VirtualMachineFiles/NEXUS/nexus/build_vmubuntu/CMakeFiles/list_install_components.dir
+/media/sf_VirtualMachineFiles/NEXUS/nexus/build_vmubuntu/CMakeFiles/rebuild_cache.dir
+/media/sf_VirtualMachineFiles/NEXUS/nexus/build_vmubuntu/CMakeFiles/edit_cache.dir
+/media/sf_VirtualMachineFiles/NEXUS/nexus/build_vmubuntu/CMakeFiles/test.dir
+/media/sf_VirtualMachineFiles/NEXUS/nexus/build_vmubuntu/CMakeFiles/exe.dir
+/media/sf_VirtualMachineFiles/NEXUS/nexus/build_vmubuntu/CMakeFiles/lib.dir
