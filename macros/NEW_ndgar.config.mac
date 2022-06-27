@@ -1,0 +1,32 @@
+### --------------------------------------------------------
+###  Configuration macro for the NEW detector geometry.
+###  This macro simulates a 1 MeV electron
+###  in the active volume.
+### --------------------------------------------------------
+
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+
+#/process/em/verbose 0
+
+# Geometry
+#/Geometry/NextNew/elfield 0
+#/Geometry/NextNew/max_step_size 1. mm
+#/Geometry/NextNew/pressure 15. bar
+#/Geometry/NextNew/field_cage_vis true
+
+### Generation
+/Generator/SingleParticle/particle opticalphoton #geantino
+/Generator/SingleParticle/min_energy 10. MeV
+/Generator/SingleParticle/max_energy 10. MeV
+#/Generator/SingleParticle/momentum 1 0 0
+/Generator/SingleParticle/region CENTER #"ZAXIS -2450"
+#/Generator/SingleParticle/region ACTIVE
+
+#/control/execute macros/physics/IonizationElectron.mac
+
+/nexus/persistency/outputFile myoutput_random_mu.next
+
+#/Generator/SingleParticle/min_phi -0.1
+#/Generator/SingleParticle/max_phi 0.1 
