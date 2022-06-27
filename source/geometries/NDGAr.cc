@@ -44,8 +44,11 @@ namespace nexus {
     G4Box* hall_solid_vol = 
       new G4Box("HALL", hall_size/2., hall_size/2., hall_size/2.);
 
+    G4NistManager* nist = G4NistManager::Instance();
+    G4Material* chamber_mat = nist->FindOrBuildMaterial("G4_AIR");
+
     G4LogicalVolume* hall_logic_vol =
-      new G4LogicalVolume(hall_solid_vol, materials::Air(), "HALL");
+      new G4LogicalVolume(hall_solid_vol, chamber_mat, "HALL");
 
     hall_logic_vol->SetVisAttributes(G4VisAttributes::GetInvisible());
 
